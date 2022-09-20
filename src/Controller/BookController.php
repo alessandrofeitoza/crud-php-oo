@@ -44,7 +44,7 @@ class BookController extends AbstractController
 
         $this->repository->save($book);
 
-        WebNotification::addErrorMessage('Novo livro adicionado');
+        WebNotification::addMessage('Novo livro adicionado');
 
         $this->redirect('/livros/listar');
     }
@@ -68,7 +68,7 @@ class BookController extends AbstractController
 
         $this->repository->update($book);
 
-        WebNotification::addErrorMessage('Livro atualizado');
+        WebNotification::addMessage('Livro atualizado');
 
         $this->redirect('/livros/listar');
     }
@@ -77,7 +77,7 @@ class BookController extends AbstractController
     {
         $this->repository->remove($_GET['id']);
 
-        WebNotification::addErrorMessage('Livro excluído');
+        WebNotification::addMessage('Livro excluído');
 
         $this->redirect('/livros/listar');
     }

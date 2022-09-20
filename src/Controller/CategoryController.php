@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Entity\Category;
+use App\Notification\WebNotification;
 use App\Repository\CategoryRepository;
 
 class CategoryController extends AbstractController
@@ -53,12 +54,16 @@ class CategoryController extends AbstractController
 
         $this->repository->update($category);
 
+        WebNotification::addMessage('Categoria atualizada');
+
         $this->redirect('/categorias/listar');
     }
 
     public function removeAction(): void
     {
         $this->repository->remove($_GET['id']);
+
+        WebNotification::addMessage('Categoria removida');
 
         $this->redirect('/categorias/listar');
     }

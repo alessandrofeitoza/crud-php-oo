@@ -6,7 +6,7 @@ namespace App\Notification;
 
 class WebNotification
 {
-    public static function addErrorMessage(string $title, string $type = 'success', string $description = ''): void
+    public static function addMessage(string $title, string $type = 'success', string $description = ''): void
     {
         $_SESSION['notifications'][] = [
             'notificationType' => $type,
