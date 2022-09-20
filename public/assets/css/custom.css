@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+    background-color: #EFEFEF;
+}
+
+table {
+    background-color: #FFFFFF;
+}
+
+.login {
+    height: 100%;
+}
+
+.navbar-brand i {
+    vertical-align: sub;
+}
+
+.btn i {
+    vertical-align: bottom;
+}
+
+.list-group-item i {
+    vertical-align: bottom;
+}
+
+li a.text-danger {
+    border-top: 1px solid #DDD;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
